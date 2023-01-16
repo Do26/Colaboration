@@ -8,6 +8,23 @@ int main()
     cout << "Introdu N : ";
     cin >> N;
 
+    int num_of_5=0, num_of_3=0, rest;
+    
+    if (N % 5 != 0){
+        N = N - 3;
+        num_of_3++;
+    } else {
+        rest = N - num_of_3 * 3;
+        num_of_5 = rest / 5;
+    }
+    cout << "Nr monede achitate de pisoi : " << num_of_5 << endl;
+    cout << "Nr monede achitate de vulpe : " << num_of_3 << endl;
+
+    return 0;
+    
+    
+    
+    /*
     int num_of_5 = N / 5; // Calculez numarul de monede (5)
     int rest = N % 5;
     int num_of_3 = 0;
@@ -34,6 +51,7 @@ int main()
     cout << "Nr monede achitate de vulpe : " << num_of_3 << endl;
 
     return 0;
+    */
 
     // Bugs :
     // Daca pun 8 imi da rezultatul gresit , posibil si la alte numere - R
